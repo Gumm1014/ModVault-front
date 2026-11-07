@@ -1,6 +1,5 @@
-
 import "./Header.css"
-
+import {Link} from "wouter"
 function Header() {
 
   return (
@@ -8,14 +7,15 @@ function Header() {
 
       <div className="logo">
         <img src="/logo.png" alt="" />
-        <h1><span>Mod</span> Vault</h1>
+        <Link href="/home"><h1><span>Mod</span> Vault</h1></Link>
+        
       </div>
 
       <button className="hamburguesa">☰</button>
 
       <div className="menu">
         <div className="nav">
-          <p>Juegos</p>
+          <Link href="/juegos"><p>Juegos</p></Link>
           <span className="separador"></span>
           <p>Mods</p>
         </div>

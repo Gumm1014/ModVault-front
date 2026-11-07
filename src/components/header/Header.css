@@ -16,6 +16,11 @@
     cursor: pointer;
 }
 
+.header a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .header span {
     color: #5A5185;
 }
@@ -62,8 +67,9 @@
     border-radius: 8px;
     transition: all 0.3s ease;
 }
+
 .barra-busqueda:focus-within {
-  box-shadow: 0 0 10px 3px #5A5185;
+    box-shadow: 0 0 10px 3px #5A5185;
 }
 
 .barra-busqueda input {
@@ -95,9 +101,10 @@
     cursor: pointer;
     white-space: nowrap;
 }
+
 @media (max-width: 1175px) {
     .btn-login-register button {
-        
+
         font-size: 0.87rem;
         padding: 10px 12px;
     }

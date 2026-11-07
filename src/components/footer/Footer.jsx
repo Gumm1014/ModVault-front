@@ -1,5 +1,5 @@
 import "./Footer.css"
-
+import {Link} from "wouter"
 function Footer() {
   return (
     <footer className="footer">
@@ -11,7 +11,7 @@ function Footer() {
           <div className="footer__descubrir">
             <p className="footer__titulo">Descubrir</p>
             <nav className="footer__enlaces">
-              <a>Todos los juegos</a>
+              <Link href="/juegos"><p>Todos los juegos</p></Link>
               <a>Todos los mods</a>
             </nav>
           </div>
