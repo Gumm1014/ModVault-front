@@ -1,0 +1,45 @@
+.mod-fila {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    font-family: "DM Sans", sans-serif;
+    text-align: left;
+}
+
+.mod-fila__imagen {
+    flex: 0 0 40%;
+    min-width: 0;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.mod-fila__info {
+    min-width: 0;
+}
+
+.mod-fila__juego {
+    margin: 0;
+    color: #8C857B;
+}
+
+.mod-fila__titulo {
+    margin: 4px 0 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.mod-fila__dato {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+}
+
+.mod-fila__dato img {
+    width: 22px;
+    height: 25px;
+    object-fit: contain;
+}

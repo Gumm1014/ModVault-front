@@ -1,0 +1,242 @@
+.hero {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('/hero.png');
+
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    font-family: "DM Sans", sans-serif;
+    border-top: 2px solid #000000;
+    border-bottom: 3px solid #000000;
+}
+
+.hero__contenido {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    max-width: 1500px;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background-color: #232f36ec;
+}
+
+.hero__principal {
+    position: relative;
+    flex: 2;
+    min-width: 0;
+    align-self: center;
+}
+
+.hero__principal img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+}
+
+.hero__etiquetas {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    max-width: 300px;
+}
+.hero__etiqueta {
+    background-color: #2F3437;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-align: left;
+}
+.hero__etiquetas :first-child{
+    background-color: #2F3437;
+    color: #fff;
+    font-weight: 600;
+}
+.hero__etiquetas :last-child{
+    background-color: #4C5357;
+    color: #F2E6D5;
+}
+
+
+.hero__galeria {
+    flex: 1.1;
+    min-width: 0;
+    display: grid;
+    align-self: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 15px;
+    margin-left: 60px;
+    border-radius: 2px;
+}
+
+.hero__galeria img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-bottom: 7px;
+    margin-top: 7px;
+}
+
+.hero__galeria--apagado img:first-child {
+    opacity: 1;
+} 
+.hero__galeria--apagado img {
+    opacity: 0.6;
+} 
+/* ------------- */
+/* juegos */
+.seccion--juegos{
+    background-image: url("/fondo.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 62vh;
+    width: 100%;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+.contenido--juego {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.contenido--juego img {
+    min-width: 0;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+.contenido--juego img:hover {
+    transform: scale(1.04);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+}
+.juegos__text {
+    display: flex;
+    color: #ffffff;
+    font-family: "DM Sans", sans-serif;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+.flecha--text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.flecha--text img{
+    width: 40px;
+    margin-left: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+.flecha--text img:hover{
+    transform: translateX(15px);
+}
+/* --------- */
+
+.catalogo--mods{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.catalogo--mods__titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    background-color: #232628;
+    box-shadow: 0px 5px 4px #000000;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+}
+.catalogo--mods__titulo h2 {
+    width: 80%; 
+    margin: 0;
+    text-align: left;
+}
+.listado--mods{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+@media (max-width: 1100px) {
+    .listado--mods { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 800px) {
+    .listado--mods { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 500px) {
+    .listado--mods { grid-template-columns: 1fr; }
+}
+
+/* ranking */
+.rankings {
+    padding: 50px 0;
+    width: 100%;
+}
+
+.rankings__contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(30px, 5vw, 120px);
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.rankings__columna {
+    min-width: 0;
+    background: linear-gradient(180deg, #8c857b41 0%, #f2e6d53b 100%);
+    padding: 40px 50px;
+    text-align: left;
+    font-family: "DM Sans", sans-serif;
+}
+
+.rankings__titulo {
+    margin: 0 0 30px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.rankings__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+@media (max-width: 800px) {
+    .rankings__contenedor {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+   
+}
+}
