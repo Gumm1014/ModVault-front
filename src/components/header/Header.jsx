@@ -17,7 +17,7 @@ function Header() {
         <div className="nav">
           <Link href="/juegos"><p>Juegos</p></Link>
           <span className="separador"></span>
-          <p>Mods</p>
+          <Link href="/mods"><p>Mods</p></Link>
         </div>
         <div className="btn-login-register">
           <button className="btn-register">Registrarse</button>

@@ -12,7 +12,7 @@ function Footer() {
             <p className="footer__titulo">Descubrir</p>
             <nav className="footer__enlaces">
               <Link href="/juegos"><p>Todos los juegos</p></Link>
-              <a>Todos los mods</a>
+              <Link href="/mods"><p>Todos los mods</p></Link>
             </nav>
           </div>
         </div>
