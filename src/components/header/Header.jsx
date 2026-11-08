@@ -20,8 +20,8 @@ function Header() {
           <Link href="/mods"><p>Mods</p></Link>
         </div>
         <div className="btn-login-register">
-          <button className="btn-register">Registrarse</button>
-          <button className="btn-login">Iniciar Sesión</button>
+          <Link href="/registro"><button className="btn-register">Registrarse</button></Link>
+          <Link href="/login"><button className="btn-login">Iniciar Sesión</button></Link>
         </div>
       </div>
 

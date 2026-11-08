@@ -6,6 +6,8 @@ import Home from './pages/home/Home'
 import Juegos from './pages/juegos/Juegos'
 import Catalogo from './pages/catalogo_mod/Catalogo'
 import DetalleMod from './pages/detalle_mod/DetalleMod'
+import Login from './pages/auth/Login'
+import Registro from './pages/auth/Registro'
 
 function App() {
   return (
@@ -14,14 +16,17 @@ function App() {
         <Header />
 
         <Switch>
-          <Route path="/home" component={Home} />
+          <Route path="/" component={Home} />
           <Route path="/juegos" component={Juegos} />
           <Route path="/mods" component={Catalogo} />
           <Route path="/mods/1" component={DetalleMod} />
+          <Route path="/login" component={Login} />
+          <Route path="/registro" component={Registro} />
 
           <Route>
             <Home />
           </Route>
+          
         </Switch>
 
         <Footer />
