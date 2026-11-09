@@ -11,6 +11,8 @@ import Registro from './pages/auth/Registro'
 import SubirMod from './pages/subir_mod/SubirMod'
 import MisMods from './pages/perfil/MisMods'
 import Descargas from './pages/perfil/ModsDescargados'
+import AdminJuegos from './pages/admin/AdminJuegos'
+import AdminMods from './pages/admin/AdminMods'
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
           <Route path="/subir" component={SubirMod} />
           <Route path="/perfil" component={MisMods} />
           <Route path="/perfil/descargados" component={Descargas} />
+          <Route path="/admin" component={AdminJuegos} />
+          <Route path="/admin/mods" component={AdminMods} />
 
           <Route>
             <Home />

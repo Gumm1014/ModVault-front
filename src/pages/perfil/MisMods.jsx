@@ -1,5 +1,6 @@
 import Tarjeta_mod from "../../components/Tarjeta_mod/Tarjeta_mod"
 import Paginacion from "../../components/Paginacion/Paginacion"
+import { Link } from "wouter"
 import "./Perfil.css"
 
 function Perfil() {
@@ -12,8 +13,8 @@ function Perfil() {
 
             <div className="perfil__contenido">
                 <nav className="perfil__tabs">
-                    <button className="perfil__tab perfil__tab--activa" type="button">Mis Mods</button>
-                    <button className="perfil__tab" type="button">Descargados</button>
+                    <Link href="/perfil" className="perfil__tab perfil__tab--activa">Mis Mods</Link>
+                    <Link href="/perfil/descargados" className="perfil__tab">Descargados</Link>
                 </nav>
 
                 <div className="perfil__cabecera">

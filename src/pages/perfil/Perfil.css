@@ -54,6 +54,7 @@
     font-size: 1.5rem;
     line-height: 1.3;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .perfil__tab--activa {
