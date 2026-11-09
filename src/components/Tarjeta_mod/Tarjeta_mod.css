@@ -5,7 +5,7 @@
     border-radius: 10px;
     overflow: hidden;
     font-family: "DM Sans", sans-serif;
-    color: #fff;
+    color: #FFFFFF;
     text-align: left;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.52);
     cursor: pointer;
@@ -21,6 +21,7 @@
     aspect-ratio: 2 / 1;
     object-fit: cover;
     display: block;
+    background-color: #2F3437;
 }
 
 .mod-tarjeta__section {
