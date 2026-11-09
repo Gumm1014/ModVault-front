@@ -9,6 +9,8 @@ import DetalleMod from './pages/detalle_mod/DetalleMod'
 import Login from './pages/auth/Login'
 import Registro from './pages/auth/Registro'
 import SubirMod from './pages/subir_mod/SubirMod'
+import MisMods from './pages/perfil/MisMods'
+import Descargas from './pages/perfil/ModsDescargados'
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/registro" component={Registro} />
           <Route path="/subir" component={SubirMod} />
+          <Route path="/perfil" component={MisMods} />
+          <Route path="/perfil/descargados" component={Descargas} />
 
           <Route>
             <Home />

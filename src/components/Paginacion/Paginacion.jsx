@@ -4,7 +4,7 @@ function Paginacion() {
   return (
     <nav className="paginacion">
       <button className="paginacion__flecha">
-        <img src="flecha-icon.svg" alt="" />
+        <img src="/flecha-icon.svg" alt="" />
       </button>
 
       <button className="paginacion__pagina paginacion__pagina--activa">1</button>
@@ -13,7 +13,7 @@ function Paginacion() {
       <button className="paginacion__pagina">4</button>
 
       <button className="paginacion__flecha paginacion__flecha--derecha">
-        <img src="flecha-icon.svg" alt="" />
+        <img src="/flecha-icon.svg" alt="" />
       </button>
     </nav>
   )
