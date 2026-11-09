@@ -91,6 +91,17 @@ function DetalleMod() {
                             <img src="/descarga-icon1.svg" alt="" />Descargar
                         </button>
                     </div>
+                    <div className="ficha-mod__acciones-propietario">
+                        <hr className="ficha-mod__separador" />
+                        
+                        {/* Notá cómo combinamos las clases base con los modificadores */}
+                        <button className="ficha-mod__boton ficha-mod__boton--secundario ficha-mod__boton--ancho">
+                            Editar
+                        </button>
+                        <button className="ficha-mod__boton ficha-mod__boton--peligro ficha-mod__boton--ancho">
+                            Eliminar
+                        </button>
+                    </div>
                 </aside>
             </section>
         </>

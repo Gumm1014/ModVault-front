@@ -187,3 +187,37 @@
     width: 24px;
     height: auto;
 }
+
+/* --- Acciones del Propietario --- */
+
+.ficha-mod__acciones-propietario {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: 2px;
+}
+
+.ficha-mod__separador {
+    width: 100%;
+    border: none;
+    border-top: 2px solid #8C857B;
+    margin: 0 0 10px 0;
+}
+
+.ficha-mod__boton--ancho {
+    width: 100%;
+    justify-content: center;
+    padding: 12px; 
+    font-size: 1.15rem;
+}
+
+.ficha-mod__boton--secundario {
+    background-color: transparent;
+    border: 2px solid #8C857B;
+}
+
+.ficha-mod__boton--peligro {
+    background-color: #893A3A; 
+    border: 2px solid #723030; 
+}
