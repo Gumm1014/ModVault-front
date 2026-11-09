@@ -1,6 +1,7 @@
 import "./Home.css"
 import Tarjeta_mod from "../../components/Tarjeta_mod/Tarjeta_mod"
 import ModFila from "../../components/ModFila/ModFila"
+import { Link } from "wouter"
 function Home() {
 
     return (
@@ -8,7 +9,7 @@ function Home() {
             <section className="hero">
                 <div className="hero__contenido">
                     <div className="hero__principal">
-                        <img src="./mods/mod1.png" alt="" />
+                        <Link href="/mods/1"><img src="/mods/mod1.png" alt="" /></Link>
                         <div className="hero__etiquetas">
                             <span className="hero__etiqueta">Hunk's axe has been replaced by a diamond axe.</span>
                             <span className="hero__etiqueta">Resident Evil: Requiem</span>
@@ -16,12 +17,12 @@ function Home() {
                     </div>
 
                     <div className="hero__galeria hero__galeria--apagado">
-                        <img src="./mods/mod1.png" alt="" />
-                        <img src="./mods/mod2.png" alt="" />
-                        <img src="./mods/mod3.png" alt="" />
-                        <img src="./mods/mod4.png" alt="" />
-                        <img src="./mods/mod5.png" alt="" />
-                        <img src="./mods/mod6.png" alt="" />
+                        <img src="/mods/mod1.png" alt="" />
+                        <img src="/mods/mod2.png" alt="" />
+                        <img src="/mods/mod3.png" alt="" />
+                        <img src="/mods/mod4.png" alt="" />
+                        <img src="/mods/mod5.png" alt="" />
+                        <img src="/mods/mod6.png" alt="" />
                     </div>
                 </div>
             </section>
@@ -36,10 +37,10 @@ function Home() {
                 </div>
 
                 <div className="contenido--juego">
-                    <img src="./juegos/juego1.png" alt="" />
-                    <img src="./juegos/juego2.png" alt="" />
-                    <img src="./juegos/juego3.png" alt="" />
-                    <img src="./juegos/juego4.png" alt="" />
+                    <img src="/juegos/juego1.png" alt="" />
+                    <img src="/juegos/juego2.png" alt="" />
+                    <img src="/juegos/juego3.png" alt="" />
+                    <img src="/juegos/juego4.png" alt="" />
                 </div>
 
             </section>
