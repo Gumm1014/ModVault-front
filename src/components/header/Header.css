@@ -147,7 +147,6 @@
     order: 3;
     display: flex;
     align-items: center;
-    gap: 20px;
     flex-shrink: 0;
     margin-right: clamp(40px, 12vw, 208px);
 }
@@ -279,7 +278,7 @@
 
 .resultados__mod-titulo {
     margin: 0;
-    font-size: 1.15rem;
+    font-size: clamp(0.65rem, 1.2vw, 1.15rem);;
     font-weight: 400;
     line-height: 1.3;
 }

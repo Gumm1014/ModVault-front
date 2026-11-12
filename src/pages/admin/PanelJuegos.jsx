@@ -2,7 +2,7 @@ import { Link } from "wouter"
 import Paginacion from "../../components/Paginacion/Paginacion"
 import "./Admin.css"
 
-function AdminJuegos() {
+function PanelJuegos() {
   return (
     <>
       <div className="admin__barra">
@@ -83,4 +83,4 @@ function AdminJuegos() {
   )
 }
 
-export default AdminJuegos
+export default PanelJuegos
