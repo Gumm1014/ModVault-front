@@ -1,0 +1,32 @@
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.paginacion__pagina,
+.paginacion__flecha {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font: inherit;
+    padding: 2px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 21px;
+}
+
+.paginacion__pagina--activa {
+    background-color: #3F6379;
+}
+
+.paginacion__flecha img {
+    display: block;
+    width: 14px;
+    height: auto;
+}
+
+.paginacion__flecha--derecha img {
+    transform: scaleX(-1);
+}
