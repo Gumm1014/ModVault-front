@@ -43,3 +43,34 @@
     height: 25px;
     object-fit: contain;
 }
+
+@media (max-width: 800px) {
+    .mod-fila {
+        gap: 12px;
+    }
+
+    .mod-fila__imagen {
+        flex: 0 0 46%;
+        aspect-ratio: 16 / 9;
+    }
+
+    .mod-fila__juego {
+        font-size: 0.75rem;
+    }
+
+    .mod-fila__titulo {
+        margin: 2px 0 6px;
+        font-size: 0.85rem;
+        line-height: 1.25;
+    }
+
+    .mod-fila__dato {
+        font-size: 0.8rem;
+        gap: 6px;
+    }
+
+    .mod-fila__dato img {
+        width: 16px;
+        height: 16px;
+    }
+}

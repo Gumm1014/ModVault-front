@@ -285,36 +285,101 @@
 }
 
 @media (max-width: 900px) {
-    .usuario-header {
-        margin-right: 0;
-    }
-}
-
-@media (max-width: 900px) {
     .header {
         height: auto;
+        min-height: 68px;
         flex-wrap: wrap;
-        gap: 12px;
-        padding: 12px;
+        gap: 0 14px;
+        padding: 10px 16px;
+        box-sizing: border-box;
+    }
+
+    .logo {
+        order: 0;
+    }
+
+    .logo img {
+        width: 48px;
+    }
+
+    .header h1 {
+        font-size: 1.25rem;
+        margin: 0;
+    }
+
+    /* Solo queda el ícono de lupa en blanco en la barra superior */
+    .barra-busqueda {
+        order: 1;
+        width: auto;
+        min-width: 0;
+        background: none;
+        border: none;
+        padding: 4px;
+        cursor: pointer;
+    }
+
+    .barra-busqueda:focus-within {
+        box-shadow: none;
+    }
+
+    .barra-busqueda input {
+        display: none;
+    }
+
+    .barra-busqueda img {
+        width: 24px;
+        height: 24px;
+        filter: brightness(0) invert(1);
+    }
+
+    /* Avatar al lado de la lupa (sin el nombre) */
+    .usuario-header {
+        order: 2;
+        margin-right: 0;
+        gap: 0;
+    }
+
+    .usuario-header__avatar {
+        width: 34px;
+        height: 34px;
+    }
+
+    .usuario-header__avatar img {
+        width: 100%;
+    }
+
+    .usuario-header__nombre {
+        display: none;
     }
 
     .hamburguesa {
         display: block;
-        order: 1;
+        order: 3;
         background: none;
         border: none;
         color: #fff;
-        font-size: 1.8rem;
+        font-size: 1.7rem;
+        line-height: 1;
+        padding: 0;
         cursor: pointer;
     }
 
+    /* Menú desplegable */
     .menu {
         display: none;
-        order: 2;
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
+        box-sizing: border-box;
         flex-direction: column;
-        gap: 30px;
-        align-items: center;
+        align-items: stretch;
+        gap: 20px;
+        padding: 8px 16px 22px;
+        background: linear-gradient(90deg, #242424 0%, #232628 100%);
+        border-top: 1px solid #4C5357;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+        z-index: 30;
     }
 
     .menu.abierto {
@@ -322,9 +387,23 @@
     }
 
     .nav {
+        width: 100%;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .nav a {
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+        border-bottom: 1px solid #4C5357;
+        text-align: left;
+    }
+
+    .nav p {
+        margin: 0;
+        font-size: 1rem;
     }
 
     .separador {
@@ -332,12 +411,31 @@
     }
 
     .btn-login-register {
+        width: 100%;
+        flex-direction: column-reverse;
+        gap: 12px;
         margin-right: 0;
     }
 
-    .barra-busqueda {
-        order: 3;
+    .btn-login-register a {
         width: 100%;
-        box-sizing: border-box;
+    }
+
+    .btn-login-register button {
+        width: 100%;
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    /* Panel de resultados en celular */
+    .resultados__panel {
+        width: 94%;
+        padding: 20px 16px 35px;
+    }
+
+    .resultados__juegos-lista,
+    .resultados__mods-lista {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 }

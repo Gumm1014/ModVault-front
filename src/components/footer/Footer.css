@@ -56,3 +56,38 @@
     margin: 25px 0 0;
     font-size: 1rem;
 }
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 0 22px;
+    }
+
+    .footer__superior {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding-bottom: 24px;
+    }
+
+    .footer__logo {
+        font-size: 1.45rem;
+    }
+
+    .footer__titulo {
+        font-size: 1.05rem;
+        margin-bottom: 12px;
+    }
+
+    .footer__enlaces {
+        gap: 12px 32px;
+    }
+
+    .footer__enlaces a {
+        font-size: 0.95rem;
+    }
+
+    .footer__copyright {
+        margin-top: 20px;
+        font-size: 0.85rem;
+        text-align: center;
+    }
+}
