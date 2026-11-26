@@ -34,6 +34,10 @@ function Header() {
         <p className="usuario-header__nombre">user1014</p>
       </Link>
 
+      <button type="button" className="btn-cerrar-busqueda" aria-label="Cancelar búsqueda">
+        <img src="/flecha.svg" alt="" />
+      </button>
+      
       <div className="barra-busqueda">
         <img src="/lupa-icon.svg" alt="" />
         <input type="text" placeholder="Buscar..." />

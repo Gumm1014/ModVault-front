@@ -10,6 +10,16 @@
     max-width: 100%;
     position: relative;
     z-index: 20;
+    box-sizing: border-box;
+}
+
+.logo,
+.nav,
+.btn-login-register,
+.usuario-header,
+.hamburguesa {
+    position: relative;
+    z-index: 25;
 }
 
 .header h1 {
@@ -68,6 +78,8 @@
     padding: 5px 15px;
     border-radius: 8px;
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 25;
 }
 
 .barra-busqueda:focus-within {
@@ -178,11 +190,11 @@
 }
 
 .resultados__fondo {
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    height: 100dvh;
     background-color: rgba(0, 0, 0, 0.75);
     z-index: 10;
 }
@@ -278,9 +290,14 @@
 
 .resultados__mod-titulo {
     margin: 0;
-    font-size: clamp(0.65rem, 1.2vw, 1.15rem);;
+    font-size: clamp(0.65rem, 1.2vw, 1.15rem);
+    ;
     font-weight: 400;
     line-height: 1.3;
+}
+
+.btn-cerrar-busqueda {
+    display: none;
 }
 
 @media (max-width: 900px) {
@@ -291,6 +308,14 @@
         gap: 0 14px;
         padding: 10px 16px;
         box-sizing: border-box;
+    }
+
+    .header::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, #242424 0%, #232628 100%);
+        z-index: 15;
     }
 
     .logo {
@@ -426,15 +451,139 @@
         font-size: 0.95rem;
     }
 
-    /* Panel de resultados en celular */
-    .resultados__panel {
-        width: 94%;
-        padding: 20px 16px 35px;
+    /* ================= MODO BÚSQUEDA ACTIVA EN CELULAR ================= */
+    .header--buscando {
+        height: 68px;
+        flex-wrap: nowrap;
+        gap: 12px;
     }
 
-    .resultados__juegos-lista,
+    .header--buscando .logo,
+    .header--buscando .usuario-header,
+    .header--buscando .hamburguesa,
+    .header--buscando .menu {
+        display: none;
+    }
+
+    .header--buscando .btn-cerrar-busqueda {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        background: none;
+        border: none;
+        color: #FFFFFF;
+        font-size: 1.6rem;
+        line-height: 1;
+        padding: 4px;
+        cursor: pointer;
+        position: relative;
+        z-index: 25;
+    }
+
+    .btn-cerrar-busqueda img {
+        display: block;
+        width: 22px;
+        height: auto;
+        transform: scaleX(-1);
+    }
+
+    .header--buscando .barra-busqueda {
+        flex: 1;
+        width: 100%;
+        background-color: #4C5357;
+        border: 2px solid #2F3437;
+        border-radius: 6px;
+        padding: 4px 12px;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .header--buscando .barra-busqueda input {
+        display: block;
+        color: #FFFFFF;
+        font-size: 0.95rem;
+        padding: 6px 4px;
+    }
+
+    .header--buscando .barra-busqueda img {
+        width: 20px;
+        height: 20px;
+        filter: none;
+    }
+
+    /* ================= PANEL DE RESULTADOS EN CELULAR ================= */
+    .resultados__panel {
+        top: 100%;
+        left: 0;
+        transform: none;
+        width: 100%;
+        border-radius: 0;
+        padding: 22px 18px 30px;
+    }
+
+    .resultados__titulo {
+        margin: 0 0 18px;
+        font-size: 1rem;
+    }
+
+    /* Juegos en 2 columnas */
+    .resultados__juegos {
+        padding-bottom: 20px;
+        margin-bottom: 22px;
+        border-bottom-width: 2px;
+    }
+
+    .resultados__juegos-lista {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px 12px;
+    }
+
+    .resultados__juego {
+        gap: 10px;
+        font-size: 0.9rem;
+    }
+
+    .resultados__juego img {
+        width: 38px;
+        border-radius: 3px;
+    }
+
+    /* Mods en tarjetas horizontales */
     .resultados__mods-lista {
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 14px;
+    }
+
+    .resultados__mod {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        padding: 8px;
+        border: none;
+        border-radius: 6px;
+    }
+
+    .resultados__mod img {
+        flex: 0 0 42%;
+        width: 42%;
+        aspect-ratio: 16 / 9;
+        border-radius: 3px;
+    }
+
+    .resultados__mod-info {
+        padding: 0;
+        min-width: 0;
+    }
+
+    .resultados__mod-juego {
+        font-size: 0.85rem;
+        margin: 0 0 4px;
+    }
+
+    .resultados__mod-titulo {
+        font-size: 0.85rem;
+        line-height: 1.3;
     }
 }

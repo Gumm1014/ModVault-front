@@ -267,25 +267,36 @@
         width: 100%;
         box-sizing: border-box;
         background-color: #1F262A;
-        padding: 18px 20px;
-        gap: 16px;
+        padding: 16px 18px 24px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px 10px;
         border-top: 1px solid #3a444c;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
         z-index: 15;
     }
 
     .catalogo-mods__bloque-categorias.abierto .catalogo-mods__categorias-lista {
-        display: flex;
+        display: grid;
+    }
+
+    .catalogo-mods__categorias-lista::before {
+        content: "Categoría";
+        grid-column: 1 / -1;
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: #FFFFFF;
+        margin-bottom: 2px;
     }
 
     .catalogo-mods__opcion {
-        font-size: 0.95rem;
-        gap: 12px;
+        font-size: 0.82rem;
+        gap: 8px;
     }
 
     .catalogo-mods__opcion input {
-        width: 22px;
-        height: 22px;
+        width: 24px;
+        height: 24px;
+        border-radius: 5px;
     }
 
     /* Grilla de mods */
