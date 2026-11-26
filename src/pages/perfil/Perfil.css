@@ -139,7 +139,7 @@
     /* Contenido y pestañas */
     .perfil__contenido {
         width: 90%;
-        padding: 15px 0 40px !important;
+        padding: 15px 0 40px ;
     }
 
     .perfil__tab {

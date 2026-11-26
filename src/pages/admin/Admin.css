@@ -39,14 +39,6 @@
     width: 90%;
 }
 
-.perfil__contenido {
-    padding: 60px 0px;
-    margin: 0 auto;
-    width: 90%;
-    text-align: left;
-}
-
-
 .admin__tabs {
     display: flex;
     gap: 20px;
