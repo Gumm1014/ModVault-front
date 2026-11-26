@@ -2,7 +2,39 @@ import "./Home.css"
 import Tarjeta_mod from "../../components/Tarjeta_mod/Tarjeta_mod"
 import ModFila from "../../components/ModFila/ModFila"
 import { Link } from "wouter"
+import { useState, useEffect } from "react";
+import api from "../../services/api";
 function Home() {
+
+    const [mods, setMods] = useState([]);
+    const [juegos, setJuegos] = useState([]);
+
+    useEffect(() => {
+        traerMods();
+        traerJuegos();
+    }, []);
+
+    const traerMods = () => {
+        api.get("/mods")
+            .then((resp) => {
+                console.log(resp.data);
+                setMods(resp.data.mods);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    };
+
+    const traerJuegos = () => {
+        api.get("/juegos")
+            .then((resp) => {
+                console.log(resp.data);
+                setJuegos(resp.data.juegos);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    }
 
     return (
         <div className="home">
@@ -36,10 +68,9 @@ function Home() {
                 </div>
 
                 <div className="contenido--juego">
-                    <img src="/juegos/juego1.png" alt="" />
-                    <img src="/juegos/juego2.png" alt="" />
-                    <img src="/juegos/juego3.png" alt="" />
-                    <img src="/juegos/juego4.png" alt="" />
+                    {juegos.map((juego) => (
+                        <img src={`http://localhost:3000/archivos/${juego.portada}`} alt="" />
+                    ))}
                 </div>
 
             </section>
@@ -48,105 +79,19 @@ function Home() {
                 <div className="catalogo--mods__titulo">
                     <h2>Mods</h2>
                 </div>
-                
-                <div className="listado--mods">
 
-                    <Tarjeta_mod
-                        imagen="/mods/mod7.png"
-                        titulo="Gun tricks"
-                        juego="Red Dead Redemtion 2"
-                        descripcion="This mod aims to bring the gun spinning tricks from red dead online to story mode."
-                        likes={26}
-                        descargas={153}
-                    />
-                    <Tarjeta_mod
-                        imagen="/mods/mod2.png"
-                        titulo="Replace Leon to Emily"
-                        juego="Resident Evil: Requiem"
-                        descripcion="Leon reads Emily's appearance. Any mod that alters Emily's appearance will affect this mod."
-                        likes={26}
-                        descargas={153}
-                    />
-                    <Tarjeta_mod
-                        imagen="/mods/mod1.png"
-                        titulo="Hunk's axe has been replaced by a diamond axe."
-                        juego="Resident Evil: Requiem"
-                        descripcion="Leon reads Emily's appearance. Any mod that alters Emily's appearance will affect this mod."
-                        likes={26}
-                        descargas={153}
-                    />
-                    <Tarjeta_mod
-                        imagen="/mods/mod8.png"
-                        titulo="Spell Perk Item Distributor"
-                        juego="Fallout 4"
-                        descripcion="A F4SE plugin that can be used to add spells/perks/items and more, to every NPC in the game, using config files."
-                        likes={26}
-                        descargas={153}
-                    />
-                    <Tarjeta_mod
-                        imagen="/mods/mod9.png"
-                        titulo="Unofficial Patch NVSE Plus"
-                        juego="Fallout New Vegas"
-                        descripcion="An updated and refined selection of bugfixes (mostly) requiring NVSE."
-                        likes={26}
-                        descargas={153}
-                    />
-                    <Tarjeta_mod
-                        imagen="/mods/mod10.png"
-                        titulo="Fuz Ro D-oh - Silent Voice"
-                        juego="Skyrim Special Edition"
-                        descripcion="A SKSE64 plugin that adds support for unvoiced in-game dialog,"
-                        likes={26}
-                        descargas={153}
-                    />
-                    <Tarjeta_mod
-                        imagen="/mods/mod1.png"
-                        titulo="Hunk's axe has been replaced by a diamond axe."
-                        juego="Resident Evil: Requiem"
-                        descripcion="Leon reads Emily's appearance. Any mod that alters Emily's appearance will affect this mod."
-                        likes={26}
-                        descargas={153}
-                    />
-                    <Tarjeta_mod
-                        imagen="/mods/mod1.png"
-                        titulo="Hunk's axe has been replaced by a diamond axe."
-                        juego="Resident Evil: Requiem"
-                        descripcion="Leon reads Emily's appearance. Any mod that alters Emily's appearance will affect this mod."
-                        likes={26}
-                        descargas={153}
-                    />
-                    <Tarjeta_mod
-                        imagen="/mods/mod1.png"
-                        titulo="Hunk's axe has been replaced by a diamond axe."
-                        juego="Resident Evil: Requiem"
-                        descripcion="Leon reads Emily's appearance. Any mod that alters Emily's appearance will affect this mod."
-                        likes={26}
-                        descargas={153}
-                    />
-                    <Tarjeta_mod
-                        imagen="/mods/mod1.png"
-                        titulo="Hunk's axe has been replaced by a diamond axe."
-                        juego="Resident Evil: Requiem"
-                        descripcion="Leon reads Emily's appearance. Any mod that alters Emily's appearance will affect this mod."
-                        likes={26}
-                        descargas={153}
-                    />
-                    <Tarjeta_mod
-                        imagen="/mods/mod1.png"
-                        titulo="Hunk's axe has been replaced by a diamond axe."
-                        juego="Resident Evil: Requiem"
-                        descripcion="Leon reads Emily's appearance. Any mod that alters Emily's appearance will affect this mod."
-                        likes={26}
-                        descargas={153}
-                    />
-                    <Tarjeta_mod
-                        imagen="/mods/mod1.png"
-                        titulo="Hunk's axe has been replaced by a diamond axe."
-                        juego="Resident Evil: Requiem"
-                        descripcion="Leon reads Emily's appearance. Any mod that alters Emily's appearance will affect this mod."
-                        likes={26}
-                        descargas={153}
-                    />
+                <div className="listado--mods">
+                    {mods.map((mod) => (
+                        <Tarjeta_mod
+                            key={mod.id_mod}
+                            imagen={`http://localhost:3000/archivos/${mod.imagen}`}
+                            titulo={mod.nombre}
+                            juego={mod.nombre_juego}
+                            descripcion={mod.descripcion_corta}
+                            likes={mod.likes}
+                            descargas={mod.descargas}
+                        />
+                    ))}
                 </div>
 
             </section>
@@ -179,7 +124,7 @@ function Home() {
                 </div>
             </section>
 
-            
+
         </div>
     )
 }
