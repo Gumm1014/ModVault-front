@@ -26,6 +26,7 @@
     white-space: nowrap;
     cursor: pointer;
 }
+
 .admin__cerrar:hover {
     background-color: #723030;
 }
@@ -37,6 +38,7 @@
     margin: 0 auto;
     width: 90%;
 }
+
 .perfil__contenido {
     padding: 60px 0px;
     margin: 0 auto;
@@ -147,6 +149,7 @@
     font: inherit;
     font-size: 1rem;
 }
+
 .admin__input:focus {
     outline: none;
 }
@@ -185,6 +188,7 @@
     font-size: 1.2rem;
     cursor: pointer;
 }
+
 .admin__subir:hover {
     background-color: transparent;
     border: 2px solid #3F6379;
@@ -235,10 +239,21 @@
     padding-right: clamp(20px, 3.6vw, 63px);
 }
 
-.admin__tabla th:nth-child(1) { width: 40%; }
-.admin__tabla th:nth-child(2) { width: 22.5%; }
-.admin__tabla th:nth-child(3) { width: 11.9%; }
-.admin__tabla th:nth-child(4) { width: 20.6%; }
+.admin__tabla th:nth-child(1) {
+    width: 40%;
+}
+
+.admin__tabla th:nth-child(2) {
+    width: 22.5%;
+}
+
+.admin__tabla th:nth-child(3) {
+    width: 11.9%;
+}
+
+.admin__tabla th:nth-child(4) {
+    width: 20.6%;
+}
 
 .admin__tabla tbody tr:last-child td {
     border-bottom: none;
@@ -275,4 +290,241 @@
 
 .admin__tabla-pie {
     padding: 35px 0 37px;
+}
+
+/* Tablet (hasta 1024px) */
+@media (max-width: 1024px) {
+    .admin__barra {
+        padding: 22px 5%;
+    }
+
+    .admin__contenido {
+        padding: 35px 0;
+    }
+
+    .admin__cuerpo {
+        grid-template-columns: 1fr;
+        row-gap: 48px;
+        margin-top: 40px;
+    }
+
+    .admin__grilla {
+        gap: 32px 24px;
+        margin-bottom: 40px;
+    }
+
+    .admin__portada,
+    .admin__editar {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .admin__panel {
+        padding: 30px 36px 45px;
+    }
+
+    /* Tabla de mods con scroll horizontal */
+    .admin__tabla-caja {
+        margin: 40px 0 20px;
+        overflow-x: auto;
+    }
+
+    .admin__tabla {
+        min-width: 680px;
+    }
+}
+
+/* Celular (hasta 768px) */
+@media (max-width: 768px) {
+
+    /* Barra superior */
+    .admin__barra {
+        padding: 18px 20px;
+        gap: 12px;
+    }
+
+    .admin__titulo {
+        font-size: 1.15rem;
+    }
+
+    .admin__cerrar {
+        padding: 6px 14px;
+        font-size: 0.85rem;
+    }
+
+    /* Contenido y pestañas */
+    .admin__contenido {
+        width: 90%;
+        padding: 14px 0 40px;
+    }
+
+    .admin__tabs {
+        gap: 8px;
+    }
+
+    .admin__tab {
+        min-width: 0;
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+
+    /* Cuerpo en 1 columna */
+    .admin__cuerpo {
+        margin-top: 26px;
+        row-gap: 36px;
+    }
+
+    /* Grilla de juegos (2 columnas) */
+    .admin__grilla {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 16px;
+        margin-bottom: 30px;
+    }
+
+    .admin__juego {
+        gap: 12px;
+    }
+
+    .admin__portada {
+        width: 100%;
+        max-width: none;
+    }
+
+    .admin__editar {
+        width: 100%;
+        max-width: none;
+        padding: 8px 0;
+        font-size: 0.9rem;
+    }
+
+    /* Panel Agregar Juego */
+    .admin__panel {
+        padding: 22px 18px 26px;
+        gap: 18px;
+    }
+
+    .admin__panel-titulo {
+        font-size: 1.1rem;
+        margin-bottom: 4px;
+    }
+
+    .admin__etiqueta {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+
+    .admin__input {
+        height: 44px;
+        padding: 0 12px;
+        font-size: 0.95rem;
+    }
+
+    .admin__zona {
+        min-height: 100px;
+        font-size: 0.85rem;
+        gap: 6px;
+    }
+
+    .admin__zona img {
+        width: 24px;
+    }
+
+    .admin__subir {
+        margin-top: 8px;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    /* Tabla de mods -> formato tarjetas */
+    .admin__tabla-caja {
+        margin: 26px 0 20px;
+        overflow: hidden;
+    }
+
+    .admin__tabla {
+        min-width: 0;
+        display: block;
+    }
+
+    .admin__tabla thead {
+        display: none;
+    }
+
+    .admin__tabla tbody {
+        display: block;
+    }
+
+    .admin__tabla tbody tr {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 16px;
+        border-bottom: 2px solid #4C5357;
+    }
+
+    .admin__tabla tbody tr:last-child {
+        border-bottom: none;
+    }
+
+    .admin__tabla td,
+    .admin__tabla td:first-child,
+    .admin__tabla td:last-child {
+        display: block;
+        width: 100%;
+        padding: 0;
+        border-bottom: none;
+        font-size: 0.9rem;
+    }
+
+    /* Miniatura + título del mod */
+    .admin__mod {
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 4px;
+    }
+
+    .admin__mod img {
+        flex: 0 0 44%;
+        border-radius: 4px;
+    }
+
+    .admin__mod p {
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.35;
+    }
+
+    /* Etiquetas "Juego" y "Usuario" antes de cada valor */
+    .admin__tabla td:nth-child(2),
+    .admin__tabla td:nth-child(3) {
+        display: flex;
+        align-items: baseline;
+        gap: 14px;
+    }
+
+    .admin__tabla td:nth-child(2)::before {
+        content: "Juego";
+        color: #8C857B;
+    }
+
+    .admin__tabla td:nth-child(3)::before {
+        content: "Usuario";
+        color: #8C857B;
+    }
+
+    /* Botón Eliminar */
+    .admin__tabla td:nth-child(4) {
+        margin-top: 6px;
+    }
+
+    .admin__eliminar {
+        width: 100%;
+        padding: 9px 0;
+        border-radius: 4px;
+        font-size: 0.95rem;
+    }
+
+    .admin__tabla-pie {
+        padding: 16px 0 24px;
+    }
 }
