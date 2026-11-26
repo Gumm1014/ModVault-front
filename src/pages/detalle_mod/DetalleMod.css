@@ -221,3 +221,143 @@
     background-color: #893A3A; 
     border: 2px solid #723030; 
 }
+
+/* Tablet (hasta 1024px) */
+@media (max-width: 1024px) {
+    .ficha-mod__galeria-lista img {
+        flex: 0 0 calc((100% - 2 * var(--separacion)) / 3);
+    }
+
+    .ficha-mod__contenido {
+        grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+        padding: 35px 0 80px;
+    }
+
+    .ficha-mod__info {
+        padding: 24px 26px 38px;
+        gap: 24px;
+    }
+
+    .ficha-mod__boton {
+        width: 100%;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+}
+
+/* Celular (hasta 768px) */
+@media (max-width: 768px) {
+    /* Hero */
+    .ficha-mod__hero {
+        min-height: 195px;
+    }
+
+    .ficha-mod__hero-encabezado {
+        width: 100%;
+        padding: 20px 18px 16px;
+    }
+
+    .ficha-mod__hero-titulo {
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+    }
+
+    .ficha-mod__hero-datos {
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .ficha-mod__hero-dato {
+        font-size: 0.78rem;
+        gap: 6px;
+    }
+
+    .ficha-mod__hero-dato img {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Galería (2 miniaturas por pantalla) */
+    .ficha-mod__galeria {
+        padding: 16px 0 12px;
+    }
+
+    .ficha-mod__galeria-lista {
+        --separacion: 14px;
+        width: 90%;
+        padding-bottom: 10px;
+    }
+
+    .ficha-mod__galeria-lista img {
+        flex: 0 0 calc((100% - var(--separacion)) / 2);
+    }
+
+    /* Contenido en 1 columna */
+    .ficha-mod__contenido {
+        grid-template-columns: 1fr;
+        gap: 26px;
+        width: 90%;
+        padding: 26px 0 50px;
+    }
+
+    .ficha-mod__sobre-titulo {
+        font-size: 1.25rem;
+        margin-bottom: 12px;
+    }
+
+    .ficha-mod__descripcion-corta,
+    .ficha-mod__descripcion-larga {
+        font-size: 0.95rem;
+        line-height: 1.45;
+    }
+
+    .ficha-mod__descripcion-larga {
+        margin-top: 20px;
+    }
+
+    /* Panel de información y acciones */
+    .ficha-mod__info {
+        padding: 24px 20px 28px;
+        gap: 22px;
+    }
+
+    .ficha-mod__fila {
+        gap: 12px;
+    }
+
+    .ficha-mod__dato-titulo {
+        font-size: 1rem;
+        margin-bottom: 6px;
+    }
+
+    .ficha-mod__dato-valor {
+        font-size: 0.9rem;
+    }
+
+    .ficha-mod__etiquetas {
+        gap: 8px 10px;
+    }
+
+    .ficha-mod__etiqueta {
+        padding: 6px 14px;
+        font-size: 0.9rem;
+    }
+
+    .ficha-mod__descarga {
+        align-items: stretch;
+        gap: 14px;
+    }
+
+    .ficha-mod__boton,
+    .ficha-mod__boton--ancho {
+        width: 100%;
+        justify-content: center;
+        padding: 10px;
+        font-size: 1rem;
+        box-sizing: border-box;
+    }
+
+    .ficha-mod__boton img {
+        width: 20px;
+    }
+}

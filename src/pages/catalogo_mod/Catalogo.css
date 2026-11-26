@@ -45,6 +45,7 @@
     font-size: clamp(0.9rem, 2.5vw, 1.05rem);
     font-weight: 500;
 }
+
 /* ------- */
 .catalogo-mods {
     display: grid;
@@ -73,6 +74,7 @@
     padding: 10px 50px 10px 40px;
     cursor: pointer;
 }
+
 .catalogo-mods__orden-caja {
     position: relative;
 }
@@ -138,4 +140,163 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: clamp(40px, 4.7vw, 81px) clamp(15px, 2vw, 35px);
     margin-bottom: 85px;
+}
+
+/* Tablet (hasta 1024px) */
+@media (max-width: 1024px) {
+    .catalogo-mods {
+        grid-template-columns: 30% minmax(0, 1fr);
+    }
+
+    .catalogo-mods__bloque-orden {
+        padding: 40px 24px;
+    }
+
+    .catalogo-mods__bloque-categorias {
+        padding: 24px 28px;
+    }
+
+    .catalogo-mods__grilla {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px 20px;
+    }
+}
+
+/* Celular (hasta 768px) */
+@media (max-width: 768px) {
+
+    /* Hero */
+    .catalogo-mods__hero {
+        min-height: 155px;
+    }
+
+    .catalogo-mods__hero-encabezado {
+        width: 100%;
+        padding: 20px 18px;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .catalogo-mods__hero-titulo {
+        font-size: 1.2rem;
+        margin-bottom: 6px;
+    }
+
+    .catalogo-mods__hero-descripcion {
+        font-size: 0.78rem;
+        line-height: 1.35;
+    }
+
+    .catalogo-mods {
+        grid-template-columns: 1fr;
+    }
+
+    /* Barra de filtros horizontal */
+    .catalogo-mods__filtros {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 18px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.45);
+    }
+
+    .catalogo-mods__bloque-orden {
+        padding: 0;
+        border-bottom: none;
+        flex: 1;
+        max-width: 215px;
+    }
+
+    .catalogo-mods__orden {
+        height: 38px;
+        box-sizing: border-box;
+        font-size: 0.85rem;
+        padding: 0 34px 0 12px;
+        line-height: 1;
+    }
+
+    .catalogo-mods__orden-flecha {
+        right: 12px;
+        width: 10px;
+    }
+
+    /* Desplegable de Categoría */
+    .catalogo-mods__bloque-categorias {
+        padding: 0;
+    }
+
+    .catalogo-mods__categorias-titulo {
+        height: 38px;
+        box-sizing: border-box;
+        margin: 0;
+        font-size: 0.85rem;
+        padding: 0 14px;
+        border: 2px solid #4C5357;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        line-height: 1;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    /* Flechita hecha en CSS puro */
+    .catalogo-mods__categorias-titulo::after {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        transform: rotate(45deg) translateY(-2px);
+        transition: transform 0.2s ease;
+    }
+
+    .catalogo-mods__bloque-categorias.abierto .catalogo-mods__categorias-titulo::after {
+        transform: rotate(-135deg) translateY(-2px);
+    }
+
+    .catalogo-mods__categorias-lista {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: #1F262A;
+        padding: 18px 20px;
+        gap: 16px;
+        border-top: 1px solid #3a444c;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+        z-index: 15;
+    }
+
+    .catalogo-mods__bloque-categorias.abierto .catalogo-mods__categorias-lista {
+        display: flex;
+    }
+
+    .catalogo-mods__opcion {
+        font-size: 0.95rem;
+        gap: 12px;
+    }
+
+    .catalogo-mods__opcion input {
+        width: 22px;
+        height: 22px;
+    }
+
+    /* Grilla de mods */
+    .catalogo-mods__contenido {
+        width: 88%;
+        padding: 30px 0 40px;
+    }
+
+    .catalogo-mods__grilla {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin-bottom: 40px;
+    }
 }
