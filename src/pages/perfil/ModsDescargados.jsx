@@ -19,7 +19,6 @@ function Perfil() {
 
                 <div className="perfil__cabecera">
                     <h2 className="perfil__titulo">Historial de descarga</h2>
-                    <button className="perfil__subir" type="button">Subir mod</button>
                 </div>
 
                 <div className="perfil__grilla">

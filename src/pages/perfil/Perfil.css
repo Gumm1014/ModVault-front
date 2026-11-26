@@ -97,3 +97,84 @@
     gap: clamp(40px, 4.7vw, 81px) clamp(15px, 2vw, 35px);
     margin-bottom: 85px;
 }
+
+/* Tablet (hasta 1024px) */
+@media (max-width: 1024px) {
+    .perfil__barra {
+        padding: 22px 5%;
+    }
+
+    .perfil__contenido {
+        padding: 40px 0;
+    }
+
+    .perfil__cabecera {
+        margin: 40px 0 32px;
+    }
+
+    .perfil__grilla {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px 20px;
+        margin-bottom: 60px;
+    }
+}
+
+/* Celular (hasta 768px) */
+@media (max-width: 768px) {
+    /* Barra del usuario */
+    .perfil__barra {
+        padding: 18px 20px;
+        gap: 12px;
+    }
+
+    .perfil__usuario {
+        font-size: 1.2rem;
+    }
+
+    .perfil__cerrar {
+        padding: 6px 14px;
+        font-size: 0.85rem;
+    }
+
+    /* Contenido y pestañas */
+    .perfil__contenido {
+        width: 90%;
+        padding: 15px 0 40px !important;
+    }
+
+    .perfil__tab {
+        padding: 8px 14px;
+        font-size: 1rem;
+    }
+
+    /* Cabecera: botón Subir mod arriba y título abajo */
+    .perfil__cabecera {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: 24px;
+        margin: 22px 0 24px ;
+    }
+
+    .perfil__cabecera a {
+        width: 100%;
+    }
+
+    .perfil__subir {
+        width: 100%;
+        padding: 8px 16px;
+        font-size: 1rem;
+        box-sizing: border-box;
+    }
+
+    .perfil__titulo {
+        font-size: 1.15rem;
+    }
+
+    /* Grilla de tarjetas */
+    .perfil__grilla {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin-bottom: 40px;
+    }
+    
+}
