@@ -98,10 +98,72 @@ img.auth__icono {
     text-decoration: none;
 }
 
-@media (max-width: 600px) {
+/* Tablet (hasta 1024px) */
+@media (max-width: 1024px) {
+    .auth__tarjeta {
+        width: min(85%, 540px);
+        padding: 40px 44px;
+        gap: 26px;
+    }
+}
+
+/* Celular (hasta 768px) */
+@media (max-width: 768px) {
+    .auth {
+        align-items: flex-start;
+        padding: 36px 0;
+        box-sizing: border-box;
+    }
+
     .auth__tarjeta {
         width: 100%;
-        padding: 24px;
+        max-width: 460px;
+        padding: 16px 22px;
+        gap: 20px;
         background-color: transparent;
+    }
+
+    .auth__titulo {
+        text-align: center;
+        font-size: 1.35rem;
+        margin-bottom: 4px;
+    }
+
+    .auth__etiqueta {
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+
+    .auth__input {
+        height: 46px;
+        padding: 0 14px;
+        font-size: 0.95rem;
+    }
+
+    .auth__caja .auth__input {
+        padding-right: 48px;
+    }
+
+    .auth__icono {
+        right: 12px;
+    }
+
+    .auth__icono img,
+    img.auth__icono {
+        width: 24px;
+    }
+
+    .auth__boton {
+        margin-top: 8px;
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .auth__cambio {
+        align-self: center;
+        font-size: 0.9rem;
+        background-color: rgba(33, 37, 40, 0.9);
+        padding: 8px 16px;
+        border-radius: 4px;
     }
 }

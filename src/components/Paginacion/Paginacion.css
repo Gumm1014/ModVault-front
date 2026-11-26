@@ -30,3 +30,20 @@
 .paginacion__flecha--derecha img {
     transform: scaleX(-1);
 }
+
+@media (max-width: 768px) {
+    .paginacion {
+        gap: 6px;
+        flex-wrap: wrap;
+    }
+
+    .paginacion__pagina,
+    .paginacion__flecha {
+        font-size: 1rem;
+        padding: 4px 10px;
+    }
+
+    .paginacion__flecha img {
+        width: 11px;
+    }
+}

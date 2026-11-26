@@ -10,7 +10,7 @@
 
 .subir-mod__usuario {
     margin: 0;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     font-weight: 500;
     line-height: 1.3;
 }
@@ -26,7 +26,7 @@
     border: 2px solid #5A5185;
     border-radius: 4px;
     color: #FFFFFF;
-    font-size: 1.1rem;
+    font-size: 1rem;
     white-space: nowrap;
     cursor: pointer;
 }
@@ -61,7 +61,7 @@
 
 .subir-mod__titulo {
     margin: 0;
-    font-size: 1.7rem;
+    font-size: 1.45rem;
     font-weight: 500;
     line-height: 1.3;
 }
@@ -76,7 +76,7 @@
     margin: 0;
     padding-bottom: 8px;
     border-bottom: 2px solid #4C5357;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.3;
 }
@@ -90,7 +90,7 @@
 .subir-mod__etiqueta {
     display: block;
     margin: 0 0 10px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1.3;
 }
 
@@ -101,7 +101,7 @@
 
 .subir-mod__ayuda {
     margin: -4px 0 14px;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     line-height: 1.3;
 }
 
@@ -115,7 +115,7 @@
     border: 3px solid #2F3437;
     border-radius: 5px;
     color: #FFFFFF;
-    font-size: 1.2rem;
+    font-size: 1.05rem;
 }
 .subir-mod__input:focus {
     outline: none;
@@ -200,7 +200,7 @@
     background-color: #232628;
     outline: 2px dashed #2F3437;
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 0.95rem;
     cursor: pointer;
 }
 
@@ -229,7 +229,178 @@
 .subir-mod__vista-titulo {
     margin: 0 0 50px;
     text-align: center;
-    font-size: 1.6rem;
+    font-size: clamp(1.3rem, 1.2vw, 1.6rem);
     font-weight: 400;
     line-height: 1.3;
+}
+
+/* Tablet (hasta 1024px) */
+@media (max-width: 1024px) {
+    .subir-mod__barra {
+        padding: 20px 5%;
+    }
+
+    .subir-mod__cancelar,
+    .subir-mod__subir {
+        padding: 6px 28px;
+    }
+
+    .subir-mod__cuerpo {
+        grid-template-columns: 1fr;
+    }
+
+    .subir-mod__formulario {
+        padding: 40px 6% 60px;
+        gap: 40px;
+    }
+
+    .subir-mod__panel {
+        padding: 45px 6% 60px;
+        box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .subir-mod__vista {
+        position: static;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+
+    .subir-mod__vista-titulo {
+        margin-bottom: 30px;
+    }
+}
+
+/* Celular (hasta 768px) */
+@media (max-width: 768px) {
+    /* Barra superior compacta con los botones a lo ancho */
+    .subir-mod__barra {
+        padding: 14px 20px;
+    }
+
+    .subir-mod__usuario {
+        display: none;
+    }
+
+    .subir-mod__acciones {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .subir-mod__cancelar,
+    .subir-mod__subir {
+        flex: 1;
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+
+    /* Formulario en 1 columna */
+    .subir-mod__formulario {
+        padding: 28px 20px 45px;
+        gap: 36px;
+    }
+
+    .subir-mod__titulo {
+        font-size: 1.35rem;
+    }
+
+    .subir-mod__seccion {
+        gap: 20px;
+    }
+
+    .subir-mod__seccion-titulo {
+        font-size: 1.1rem;
+        padding-bottom: 6px;
+    }
+
+    .subir-mod__fila {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .subir-mod__etiqueta {
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+    }
+
+    .subir-mod__opcional {
+        font-size: 0.85rem;
+        margin-left: 4px;
+    }
+
+    .subir-mod__ayuda {
+        font-size: 0.82rem;
+        margin: -2px 0 12px;
+    }
+
+    /* Inputs y áreas de texto */
+    .subir-mod__input,
+    .subir-mod__select,
+    .subir-mod__texto {
+        font-size: 0.95rem;
+        border-width: 2px;
+    }
+
+    .subir-mod__input,
+    .subir-mod__select {
+        height: 44px;
+        padding: 0 14px;
+    }
+
+    .subir-mod__select {
+        padding-right: 42px;
+    }
+
+    .subir-mod__flecha {
+        right: 14px;
+        width: 12px;
+    }
+
+    .subir-mod__caja .subir-mod__input {
+        padding-right: 56px;
+    }
+
+    .subir-mod__agregar {
+        width: 46px;
+    }
+
+    .subir-mod__agregar img {
+        width: 22px;
+    }
+
+    .subir-mod__texto {
+        padding: 12px 14px;
+    }
+
+    .subir-mod__texto--corta {
+        height: 100px;
+    }
+
+    .subir-mod__texto--larga {
+        height: 130px;
+    }
+
+    /* Zonas de carga */
+    .subir-mod__zona {
+        min-height: 115px;
+        font-size: 0.85rem;
+        gap: 6px;
+    }
+
+    .subir-mod__zona img {
+        width: 24px;
+    }
+
+    /* Panel de visualización */
+    .subir-mod__panel {
+        padding: 35px 20px 50px;
+    }
+
+    .subir-mod__vista {
+        max-width: 100%;
+    }
+
+    .subir-mod__vista-titulo {
+        font-size: 1.25rem;
+        margin-bottom: 24px;
+    }
 }

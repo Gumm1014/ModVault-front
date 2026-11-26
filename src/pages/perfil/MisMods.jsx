@@ -19,7 +19,7 @@ function Perfil() {
 
                 <div className="perfil__cabecera">
                     <h2 className="perfil__titulo">Mi contenido</h2>
-                    <button className="perfil__subir" type="button">Subir mod</button>
+                    <Link href="/subir"><button className="perfil__subir" type="button">Subir mod</button></Link>
                 </div>
 
                 <div className="perfil__grilla">

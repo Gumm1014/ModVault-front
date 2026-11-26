@@ -39,8 +39,50 @@
     border-radius: 4px;
     cursor: pointer;
     box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.603);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .catalogo__juegos--grilla img:hover{
     transform: scale(1.04);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Tablet (hasta 1024px) */
+@media (max-width: 1024px) {
+    .catalogo__juegos--grilla {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/* Celular (hasta 768px) */
+@media (max-width: 768px) {
+    .catalogo {
+        padding: 0;
+    }
+
+    .catalogo__juegos {
+        width: 100%;
+        border-radius: 0;
+        padding: 28px 20px 40px;
+    }
+
+    .catalogo__titulo {
+        font-size: 1.35rem;
+        margin-bottom: 10px;
+    }
+
+    .catalogo__subtitulo {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-bottom: 26px;
+    }
+
+    .catalogo__juegos--grilla {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 16px;
+        margin-bottom: 35px;
+    }
+
+    .catalogo__juegos--grilla img {
+        display: block;
+    }
 }

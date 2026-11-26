@@ -25,15 +25,19 @@ function Header() {
           <Link href="/registro"><button className="btn-register">Registrarse</button></Link>
           <Link href="/login"><button className="btn-login">Iniciar Sesión</button></Link>
         </div>
-
-        <Link href="/perfil" className="usuario-header">
-          <div className="usuario-header__avatar">
-            <img src="/icons/perfil-icon.png" alt="" />
-          </div>
-          <p className="usuario-header__nombre">user1014</p>
-        </Link>
       </div>
 
+      <Link href="/perfil" className="usuario-header">
+        <div className="usuario-header__avatar">
+          <img src="/icons/perfil-icon.png" alt="" />
+        </div>
+        <p className="usuario-header__nombre">user1014</p>
+      </Link>
+
+      <button type="button" className="btn-cerrar-busqueda" aria-label="Cancelar búsqueda">
+        <img src="/flecha.svg" alt="" />
+      </button>
+      
       <div className="barra-busqueda">
         <img src="/lupa-icon.svg" alt="" />
         <input type="text" placeholder="Buscar..." />

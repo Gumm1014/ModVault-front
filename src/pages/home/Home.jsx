@@ -29,11 +29,10 @@ function Home() {
             <section className="seccion--juegos">
                 <div className="juegos__text">
                     <h2>Juegos</h2>
-                    <div className="flecha--text">
+                    <Link href="/juegos"><div className="flecha--text">
                         <p>Ver todos los juegos</p>
                         <img src="./flecha.svg" alt="" />
-                    </div>
-
+                    </div></Link>
                 </div>
 
                 <div className="contenido--juego">
